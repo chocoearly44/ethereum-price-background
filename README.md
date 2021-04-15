@@ -1,5 +1,5 @@
 # Ethereum Price Background
-A nice Wallpaper Engine powered wallpaper that shows current and past prices of Etherum cryptocurrency.
+A nice Wallpaper Engine powered wallpaper that shows current and past prices of Ethereum cryptocurrency.
 <br/>
 <br/>
 ![Background preview](https://raw.githubusercontent.com/JurijTSL/ethereum-price-background/main/preview.png)
