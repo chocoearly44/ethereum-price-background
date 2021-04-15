@@ -4,7 +4,10 @@ A nice Wallpaper Engine powered wallpaper that shows current and past prices of 
 <br/>
 ![Background preview](https://raw.githubusercontent.com/JurijTSL/ethereum-price-background/main/preview.png)
 
-# Special thanks
+## Installing
+Get it on [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=2458069432)
+
+## Special thanks
 - Mohammad Abdul Mohaiman ([Pure CSS Animated Background](https://codepen.io/mohaiman/pen/MQqMyo))
 - CoinGecko ([CoinGecko API](https://www.coingecko.com/en/api))
 
