@@ -10,28 +10,28 @@ body {
 }
 
 .flex-row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 i.ethlogo {
-    font-size: 50px;
-    margin-right: 10px;
-    color: #FFFFFF;
+	font-size: 50px;
+	margin-right: 10px;
+	color: #FFFFFF;
 }
 
 i.arrow {
-    font-size: 30px;
-    margin-left: 20px;
+	font-size: 30px;
+	margin-left: 20px;
 }
 
 i.arrow.red {
-    color: #FF0000;
+	color: #FF0000;
 }
 
 i.arrow.green {
-    color: #0bbb0b;
+	color: #0bbb0b;
 }
 
 .context {
@@ -48,8 +48,9 @@ i.arrow.green {
 
 
 .area {
-	background: #4e54c8;
-	background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
+	--bckgColor: #4e54c8;
+	
+	background: var(--bckgColor);
 	width: 100%;
 	height: 100vh;
 }
