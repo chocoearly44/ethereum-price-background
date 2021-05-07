@@ -2,10 +2,7 @@
 A nice Wallpaper Engine powered wallpaper that shows current and past prices of Ethereum cryptocurrency.
 <br/>
 <br/>
-![Normal Mode preview](https://raw.githubusercontent.com/JurijTSL/ethereum-price-background/main/preview-git.jpg)
-
-
-![Dark Mode preview](https://raw.githubusercontent.com/JurijTSL/ethereum-price-background/main/preview-git-dark.jpg)
+![Background preview](https://raw.githubusercontent.com/JurijTSL/ethereum-price-background/main/preview.png)
 
 ## Installing
 Get it on [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=2458069432)

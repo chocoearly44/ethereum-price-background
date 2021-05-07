@@ -6,6 +6,41 @@
 	{
 		"properties" : 
 		{
+			"currency" : 
+			{
+				"index" : 1,
+				"options" : 
+				[
+					{
+						"label" : "Ethereum",
+						"value" : "ethereum"
+					},
+					{
+						"label" : "Bitcoin",
+						"value" : "bitcoin"
+					},
+					{
+						"label" : "Dogecoin",
+						"value" : "dogecoin"
+					},
+					{
+						"label" : "Litecoin",
+						"value" : "litecoin"
+					},
+					{
+						"label" : "Polkadot",
+						"value" : "polkadot"
+					},
+					{
+						"label" : "Solana",
+						"value" : "solana"
+					}
+				],
+				"order" : 101,
+				"text" : "Currency",
+				"type" : "combo",
+				"value" : "ethereum"
+			},
 			"schemecolor" : 
 			{
 				"order" : 0,
@@ -37,8 +72,8 @@
 	"preview" : "preview.jpg",
 	"tags" : [ "Technology" ],
 	"title" : "Ethereum price chart",
-	"type" : "web",
-	"version" : 3,
+	"type" : "Web",
+	"version" : 4,
 	"visibility" : "public",
 	"workshopid" : "2458069432",
 	"workshopurl" : "steam://url/CommunityFilePage/2458069432"
