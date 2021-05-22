@@ -1,46 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>ethereum-price-background</title>
+		<link rel="stylesheet" href="./style.css">
 
-<head>
-	<meta charset="UTF-8">
-	<title>ethereum-price-background</title>
-	<link rel="stylesheet" href="./style.css">
+		<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+	</head>
 
-	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
-</head>
+	<body>
+		<div class="area" id="area">
+			<ul class="circles">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
 
-<body>
-	<div class="context">
-		<center>
-            <div class="flex-row">
-                <img id="icon" class="icon" height="50px" src="icon/solana.svg" style="margin-right: 10px;"></img> 
-                <h1 id="current-price"></h1>
-                <i id="arrow-sign"></i>
-            </div>
-		</center>
+		<div class="context">
+			<center>
+				<div class="flex-row">
+					<img id="icon" class="icon" height="50px" src="icon/solana.svg" style="margin-right: 10px;"></img> 
+					<h1 id="current-price"></h1>
+					<i id="arrow-sign"></i>
+				</div>
+			</center>
 
-		<canvas id="speedChart" style="width: 30%; height: auto;"></canvas>
-	</div>
+			<canvas id="speedChart" style="width: 30%; height: auto;"></canvas>
+		</div>
 
-
-	<div class="area" id="area">
-		<ul class="circles">
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-		</ul>
-	</div>
-
-	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	<script src="index.js"></script>
-
-</body>
+		<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="index.js"></script>
+	</body>
 </html>

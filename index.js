@@ -1,4 +1,6 @@
-var currency = "dontexist";
+let currency = "dontexist";
+let rlcurrency = "dontexist";
+let currencysign = "O";
 
 window.wallpaperPropertyListener = {
 	applyUserProperties: function(properties) {
@@ -7,6 +9,7 @@ window.wallpaperPropertyListener = {
 				case "normal":
 					$("#area").css("--bckgColor", "#4e54c8");
 					break;
+
 				case "dark":
 					$("#area").css("--bckgColor", "#202225");
 					break;
@@ -15,9 +18,44 @@ window.wallpaperPropertyListener = {
 
 		if (properties.currency) {
 			currency = properties.currency.value;
-			retreivePrice();
-			updateGraph();
-			updateIcon();
+
+			setTimeout(function () {
+				retreivePrice();
+				updateGraph();
+				updateIcon();
+			}, 2000);
+		}
+		
+		if (properties.rlcurrency) {
+			switch(properties.rlcurrency.value) {
+				case "usd":
+					currencysign = "$";
+					break;
+
+				case "cad":
+					currencysign = "CAD";
+					break;
+
+				case "eur":
+					currencysign = "€";
+					break;
+
+				case "jpy":
+					currencysign = "¥";
+					break;
+
+				case "gbp":
+					currencysign = "£";
+					break;
+			}
+			
+			rlcurrency = properties.rlcurrency.value;
+
+			setTimeout(function () {
+				retreivePrice();
+				updateGraph();
+				updateIcon();
+			}, 2000);
 		}
 	}
 }
@@ -51,7 +89,7 @@ var chartOptions = {
 	tooltips: {
 		callbacks: {
 			label: function(tooltipItems, data) {
-				return "$ " + tooltipItems.yLabel.toString();
+				return currencysign + " " + tooltipItems.yLabel.toString();
 			}
 		}
 	},
@@ -134,13 +172,16 @@ function formateDate(timestamp) {
 		month = "0" + month;
 	}
 
-	return month + '/' + date.getDate() + '/' + date.getFullYear() + " " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+	return month + '/' + date.getDate() + '/' + date.getFullYear() + " " + ("0" + date.getHours()).slice(-2) + ":" + ("0" + date.getMinutes()).slice(-2) + ":" + ("0" + date.getSeconds()).slice(-2);
 };
 
 function retreivePrice() {
-	$.get("https://api.coingecko.com/api/v3/simple/price?ids=" + currency + "&vs_currencies=usd", function(data) {
-		var obj = $.parseJSON(JSON.stringify(data));
-		var updPrice = obj[currency].usd;
+	$.get("https://api.coingecko.com/api/v3/simple/price?ids=" + currency + "&vs_currencies=" + rlcurrency, function(data) {
+		var jsonObj = $.parseJSON(JSON.stringify(data));
+		var obj1 = jsonObj[currency];
+		var obj2 = $.parseJSON(JSON.stringify(obj1));
+
+		var updPrice = obj2[rlcurrency];
 
 		chartData.push(updPrice);
 		chartLabels.push(formateDate(Date.now()));
@@ -148,7 +189,7 @@ function retreivePrice() {
 
 		lineChart.update();
 
-		$("#current-price").text("$" + updPrice);
+		$("#current-price").text(currencysign + " " + updPrice);
 
 		if (updPrice > price) {
 			$("#arrow-sign").removeAttr('class');
@@ -173,7 +214,7 @@ function updateGraph() {
 		chartLabels.pop();
 	}
 
-	$.get("https://api.coingecko.com/api/v3/coins/" + currency + "/market_chart?vs_currency=usd&days=1", function(data) {
+	$.get("https://api.coingecko.com/api/v3/coins/" + currency + "/market_chart?vs_currency=" + rlcurrency + "&days=1", function(data) {
 		var i;
 		for (i = 0; i < data.prices.length; i++) {
 			var priceToAdd = parseFloat(data.prices[i][1]).toFixed(2);
@@ -190,6 +231,3 @@ function updateGraph() {
 setInterval(function() {
 	retreivePrice();
 }, 300000);
-
-retreivePrice();
-updateGraph();

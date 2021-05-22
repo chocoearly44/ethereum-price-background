@@ -1,6 +1,6 @@
 {
 	"contentrating" : "Everyone",
-	"description" : "Wallpaper shows graph for Ethereum price over last 24 hours and current price.\r\n\r\nYep, It's open souce:\r\nhttps://github.com/JurijTSL/ethereum-price-background",
+	"description" : "Wallpaper shows graph for Ethereum (and other currencies) price over last 24 hours and current price.\r\n\r\nYep, It's open souce:\r\nhttps://github.com/JurijTSL/ethereum-price-background",
 	"file" : "index.html",
 	"general" : 
 	{
@@ -37,9 +37,40 @@
 					}
 				],
 				"order" : 101,
-				"text" : "Currency",
+				"text" : "Crypto Currency",
 				"type" : "combo",
 				"value" : "ethereum"
+			},
+			"rlcurrency" : 
+			{
+				"index" : 0,
+				"options" : 
+				[
+					{
+						"label" : "US Dollar",
+						"value" : "usd"
+					},
+					{
+						"label" : "Canadian Dollar",
+						"value" : "cad"
+					},
+					{
+						"label" : "Euro",
+						"value" : "eur"
+					},
+					{
+						"label" : "Japanese Yen",
+						"value" : "jpy"
+					},
+					{
+						"label" : "Great British Pound",
+						"value" : "gbp"
+					}
+				],
+				"order" : 100,
+				"text" : "Currency",
+				"type" : "combo",
+				"value" : "usd"
 			},
 			"schemecolor" : 
 			{
@@ -50,7 +81,7 @@
 			},
 			"style" : 
 			{
-				"index" : 0,
+				"index" : 2,
 				"options" : 
 				[
 					{
@@ -62,7 +93,7 @@
 						"value" : "dark"
 					}
 				],
-				"order" : 100,
+				"order" : 102,
 				"text" : "Style",
 				"type" : "combo",
 				"value" : "normal"
@@ -73,7 +104,7 @@
 	"tags" : [ "Technology" ],
 	"title" : "Ethereum price chart",
 	"type" : "Web",
-	"version" : 4,
+	"version" : 6,
 	"visibility" : "public",
 	"workshopid" : "2458069432",
 	"workshopurl" : "steam://url/CommunityFilePage/2458069432"
