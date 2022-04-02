@@ -1,0 +1,102 @@
+{
+	"contentrating": "Everyone",
+	"description": "Wallpaper shows graph for Ethereum (and other currencies) price over last 24 hours and current price.\r\n\r\nYep, It's open souce:\r\nhttps://github.com/chocoearly44/ethereum-price-background",
+	"file": "index.html",
+	"general": {
+		"properties": {
+			"token": {
+				"index": 1,
+				"options": [
+					{
+						"label": "Ethereum",
+						"value": "ethereum"
+					},
+					{
+						"label": "Bitcoin",
+						"value": "bitcoin"
+					},
+					{
+						"label": "Dogecoin",
+						"value": "dogecoin"
+					},
+					{
+						"label": "Litecoin",
+						"value": "litecoin"
+					},
+					{
+						"label": "Polkadot",
+						"value": "polkadot"
+					},
+					{
+						"label": "Solana",
+						"value": "solana"
+					}
+				],
+				"order": 101,
+				"text": "Crypto Currency",
+				"type": "combo",
+				"value": "ethereum"
+			},
+			"currency": {
+				"index": 0,
+				"options": [
+					{
+						"label": "US Dollar",
+						"value": "usd"
+					},
+					{
+						"label": "Canadian Dollar",
+						"value": "cad"
+					},
+					{
+						"label": "Euro",
+						"value": "eur"
+					},
+					{
+						"label": "Japanese Yen",
+						"value": "jpy"
+					},
+					{
+						"label": "Great British Pound",
+						"value": "gbp"
+					}
+				],
+				"order": 100,
+				"text": "Currency",
+				"type": "combo",
+				"value": "usd"
+			},
+			"style": {
+				"index": 2,
+				"options": [
+					{
+						"label": "Normal Mode",
+						"value": "normal"
+					},
+					{
+						"label": "Dark Mode",
+						"value": "dark"
+					}
+				],
+				"order": 102,
+				"text": "Style",
+				"type": "combo",
+				"value": "normal"
+			},
+			"schemecolor": {
+				"order": 0,
+				"text": "ui_browse_properties_scheme_color",
+				"type": "color",
+				"value": "0.3058823529411765 0.32941176470588235 0.7843137254901961"
+			}
+		}
+	},
+	"preview": "preview.jpg",
+	"tags": ["Technology"],
+	"title": "Ethereum price chart",
+	"type": "Web",
+	"version": 6,
+	"visibility": "public",
+	"workshopid": "2458069432",
+	"workshopurl": "steam://url/CommunityFilePage/2458069432"
+}
