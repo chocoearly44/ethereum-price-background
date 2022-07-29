@@ -1,5 +1,5 @@
 <p align="center">
-  <img align="center" src="./assets/icon.png" height="150px">
+  <img align="center" src="./assets/icon.svg" height="150px">
 </p>
 
 <h1 align="center">Ethereum Price Background</h1>
@@ -26,15 +26,15 @@
 Get it on [Steam Workshop][steam-url]
 
 ## Credits
-A special thanks goes to
 - Mohammad Abdul Mohaiman ([Pure CSS Animated Background](https://codepen.io/mohaiman/pen/MQqMyo))
 - CoinGecko ([CoinGecko API](https://www.coingecko.com/en/api))
 
 ## Bug reporting
-If you encounter any bugs while using the wallpaper please report them in the [Issues Section][issues-url] on GitHub Repository.
+
+If you encounter any bugs while using Ethereum Price Background, please report them in the [Issues Section][issues-url].
 
 ## Support
-You can receive additional support in a [Discussions Section][discussions-url] here on GitHub.
+You can receive additional support in a [Discussions Section][discussions-url].
 
 [contributors-shield]: https://img.shields.io/github/contributors/chocoearly44/ethereum-price-background.svg?style=for-the-badge
 [forks-shield]: https://img.shields.io/github/forks/chocoearly44/ethereum-price-background.svg?style=for-the-badge
