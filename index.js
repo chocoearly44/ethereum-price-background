@@ -6,17 +6,33 @@ var chartData = new Array();
 var chartLabels = new Array();
 let price = 0;
 
-var signs = { usd: "$", cad: "CAD", eur: "€", jpy: "¥", gbp: "£" };
+var currencies = {
+	usd: "$",
+	cad: "CAD",
+	eur: "€",
+	jpy: "¥",
+	gbp: "£",
+	inr: "₹"
+};
+
+const tokens = {
+	ethereum: "./icons/ethereum.svg",
+	bitcoin: "./icons/bitcoin.svg",
+	dogecoin: "./icons/dogecoin.svg",
+	litecoin: "./icons/litecoin.svg",
+	polkadot: "./icons/polkadot.svg",
+	solana: "./icons/solana.svg",
+};
 
 // Setup graph
 var ethCanvas = document.getElementById("speedChart");
 Chart.defaults.global.defaultFontFamily = "Varela Round";
 
-var speedData = {
+var priceData = {
 	labels: chartLabels,
 	datasets: [
 		{
-			label: "Car Speed",
+			label: "Price",
 			data: chartData,
 			lineTension: 0,
 			fill: false,
@@ -82,7 +98,7 @@ var chartOptions = {
 
 var lineChart = new Chart(ethCanvas, {
 	type: "line",
-	data: speedData,
+	data: priceData,
 	options: chartOptions,
 });
 
@@ -97,7 +113,7 @@ window.wallpaperPropertyListener = {
 		// Set currency
 		if (properties.currency) {
 			currency = properties.currency.value;
-			sign = signs[currency];
+			sign = currencies[currency];
 		}
 
 		// Set style
@@ -121,34 +137,6 @@ window.wallpaperPropertyListener = {
 };
 
 // Logic
-function updateIcon() {
-	switch (token) {
-		case "ethereum":
-			$("#icon").attr("src", "./icons/ethereum.svg");
-			break;
-
-		case "bitcoin":
-			$("#icon").attr("src", "./icons/bitcoin.svg");
-			break;
-
-		case "dogecoin":
-			$("#icon").attr("src", "./icons/dogecoin.svg");
-			break;
-
-		case "litecoin":
-			$("#icon").attr("src", "./icons/litecoin.svg");
-			break;
-
-		case "polkadot":
-			$("#icon").attr("src", "./icons/polkadot.svg");
-			break;
-
-		case "solana":
-			$("#icon").attr("src", "./icons/solana.svg");
-			break;
-	}
-}
-
 function formateDate(timestamp) {
 	var date = new Date(timestamp);
 
@@ -158,6 +146,10 @@ function formateDate(timestamp) {
 	}
 
 	return month + "/" + date.getDate() + "/" + date.getFullYear() + " " + ("0" + date.getHours()).slice(-2) + ":" + ("0" + date.getMinutes()).slice(-2) + ":" + ("0" + date.getSeconds()).slice(-2);
+}
+
+function updateIcon() {
+	$("#icon").attr("src", tokens[token]);
 }
 
 function updateDayGraph() {

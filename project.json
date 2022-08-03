@@ -59,6 +59,10 @@
 					{
 						"label": "Great British Pound",
 						"value": "gbp"
+					},
+					{
+						"label": "Indian rupee",
+						"value": "inr"
 					}
 				],
 				"order": 100,
